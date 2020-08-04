@@ -36,4 +36,4 @@ jobs:
       run: echo set bar
       env:
         KEY: bar
-    - run: echo $KEY
+    - run: echo ${KEY}
