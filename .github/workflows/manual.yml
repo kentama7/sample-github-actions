@@ -29,9 +29,11 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
     - if: ${{ github.event.inputs.name == 'hoge' }}
+      run: echo set foo
       env:
         KEY: foo
     - if: ${{ github.event.inputs.name == 'fuga' }}
+      run: echo set bar
       env:
         KEY: bar
     - run: echo $KEY
