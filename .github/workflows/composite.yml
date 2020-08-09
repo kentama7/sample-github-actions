@@ -12,6 +12,6 @@ jobs:
       - uses: Kentama7/hello-world-composite-run-steps-action@v1
         with:
           name: 'Jiro'
-      - uses: Kentama7/private-hello-world-composite-run-steps-action@v1
-        with:
-          name: 'Saburo'
+#       - uses: Kentama7/private-hello-world-composite-run-steps-action@v1
+#         with:
+#           name: 'Saburo'
