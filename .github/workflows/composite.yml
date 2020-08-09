@@ -8,4 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: Kentama7/hello-world-composite-run-steps-action@v1
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Ichiro'
+      - uses: Kentama7/hello-world-composite-run-steps-action@v1
+        with:
+          who-to-greet: 'Jiro'
