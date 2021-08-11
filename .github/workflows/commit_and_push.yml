@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Create file
+      - name: Update file
         run: date >> test.text
 
       - name: Commit and Push
