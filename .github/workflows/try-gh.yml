@@ -6,16 +6,15 @@ on:
 jobs:
   gh:
     runs-on: ubuntu-latest
-
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       
       - name: バージョン
         run: |
           gh --version
-      - name: ログイン
-        run: |
-          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+
       - name: PRリスト
         run: |
           gh pr list
