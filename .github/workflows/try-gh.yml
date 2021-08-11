@@ -13,5 +13,6 @@ jobs:
       - name: ghいろいろ
         run: |
           gh --version
+          gh auth login --with-token ${{ secrets.USER_TOKEN }}
           gh pr list
           gh workflow list
