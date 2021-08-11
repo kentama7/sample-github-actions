@@ -4,11 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  commit_and_push:
+  gh:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       
-      - name: gh使える？
-        run: gh --version
+      - name: ghいろいろ
+        run: |
+          gh --version
+          gh pr list
+          gh workflow list
