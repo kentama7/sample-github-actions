@@ -1,0 +1,14 @@
+name: try gh
+
+on:
+  workflow_dispatch:
+
+jobs:
+  commit_and_push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: gh使える？
+        run: gh --version
