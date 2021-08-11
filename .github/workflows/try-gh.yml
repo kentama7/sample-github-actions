@@ -10,9 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: ghいろいろ
+      - name: バージョン
         run: |
           gh --version
-          gh auth login --with-token ${{ secrets.USER_TOKEN }}
+      - name: ログイン
+        run: |
+          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+      - name: PRリスト
+        run: |
           gh pr list
+          
+      - name: wリスト
+        run: |
           gh workflow list
