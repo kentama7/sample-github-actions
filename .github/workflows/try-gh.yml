@@ -19,6 +19,7 @@ jobs:
         run: |
           gh pr list
           
-      - name: wリスト
+      - name: PRを作る
         run: |
-          gh workflow list
+          date +%Y-%m-%dT%H:%M:%S >> README.md
+          gh pr create --title "Update README.md" --body "Everything works again"
