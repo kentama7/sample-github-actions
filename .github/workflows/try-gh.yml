@@ -21,7 +21,7 @@ jobs:
           
       - name: PRを作る
         run: |
-          date >> README.md
+          date >> hoge.txt
           git config user.name ${{ secrets.GIT_ACCOUNT }}
           git config user.email ${{ secrets.GIT_EMAIL }}
           git switch -c update_readme
