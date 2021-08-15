@@ -22,4 +22,10 @@ jobs:
       - name: PRを作る
         run: |
           date +%Y-%m-%dT%H:%M:%S >> README.md
+          git config user.name ${{ secrets.GIT_ACCOUNT }}
+          git config user.email ${{ secrets.GIT_EMAIL }}
+          git switch -c update_readme
+          git add .
+          git commit -m "Update README.md"
+          git push
           gh pr create --title "Update README.md" --body "Everything works again"
